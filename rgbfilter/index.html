@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles/index.processed.css" />
+  <title>Pareidolia Filter App</title>
+  <meta name="theme-color" content="#000">
+ 
+  <meta name="apple-mobile-web-app-title" content="RGB Lens">
+  <meta name="Description" content="Turn your device into a magic lens for viewing the Pareidolia Exhibition">
+  <link rel="apple-touch-icon" href="icons/icon192.jpg">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <meta property="og:url" content="https://pareidoliamusicfestival.squarespace.com/">
+  <meta property="og:title" content="Pareidolia Filter App">
+  <meta property="og:image" content="https://res.cloudinary.com/dah2kghk9/image/upload/v1714326926/Combination_Mark_Colorful_nqcoxw.png">
+  <meta property="og:description" content="Turn your device into a magic lens for viewing the Pareidolia Exhibition">
+ 
+</head>
+<body>
+  <div id="intro">
+    <div class="rgb-player">
+      <video playsinline></video>
+      <aside class="filter">
+        <div class="loading"></div>
+      </aside>
+      <nav>
+        <div>
+          <input type="radio" name="color" id="red" checked>
+          <label for="red">Red</label>
+        </div>
+        <div>
+          <input type="radio" name="color" id="green">
+          <label for="green">Green</label>
+        </div>
+        <div>
+          <input type="radio" name="color" id="blue">
+          <label for="blue">Blue</label>
+        </div>
+        <div id="chase-container">
+          <input type="radio" name="color" id="chase">
+          <label for="chase">Color Chase</label>
+        </div>
+        <div>
+          <button type="button" id="stop">
+            <svg viewBox="0 0 90 90">
+              <title>Stop Camera</title>
+              <line x1="10" y1="10" x2="80" y2="80" stroke="#fff" stroke-linecap="round" stroke-width="10"/>
+              <line x1="10" y1="80" x2="80" y2="10" stroke="#fff" stroke-linecap="round" stroke-width="10"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+    <h1>
+      <img src="https://res.cloudinary.com/dah2kghk9/image/upload/v1714326926/Combination_Mark_Colorful_nqcoxw.png" alt="Pareidoia Logo"/>
+    </h1>
+    <p>Turn your device into a magic&nbsp;viewing&nbsp;lens</p>
+    <div class="checking-support loading"></div>
+    <button type="button" id="launch-camera">
+      <svg viewBox="0 0 90 90">
+        <title>Launch Camera</title>
+        <circle cx="45" cy="45" r="35" stroke="#fff" stroke-width="10.5" fill="none" />
+        <polygon points="35,30 65,45 35,60" fill="#fff" stroke="none" />
+      </svg>
+    </button>
+    <a href="#more-info" class="modal-link get-more-info">More Info</a>
+  </div>
+  <div id="more-info" class="modal">
+    <div class="modal-content">
+      <img src="https://res.cloudinary.com/dah2kghk9/image/upload/v1714413869/Asset_4_nahtyb.png" alt="Melitta Deljanin Logo"/>
+      <p>
+        <a href="https://melittadeljanin.com/" target="_blank" rel="noopener">Melitta Deljanin</a> is a New York based artist and designer.
+        
+      </p>
+      <p>Pareidolia is a music festival that brings people together
+        through different interpretations of patterns and music. Pareidolia
+        refers to the tendency of the human mind to perceive
+        familiar patterns or shapes in random stimuli. It highlights the human brain’s remarkable ability to find meaning and structure in the ambiguous.<br>
+      <p>
+        The animation is a superimposition of many different semi-transparent images, each one in a vibrant color. This
+        results in an array of connectivity through the images, each one relating to the next, with the colors bleeding into each other.
+        Through a colored filter it is possible to discover the layers in which the image is composed.
+      </p> 
+      <p>The filter’s colors are Red, Green and Blue, each one of them will reveal a different layer.</p>
+      <p>This app will transform your mobile device in a viewing lens to experience the world of Pareidolia.</p>
+
+      <h2>Privacy Policy</h2>
+      <p>
+        When viewed on a device that supports camera access from a browser, the site will ask for permission to use the camera.
+        The video stream is only viewable by you when you enable the camera&nbsp;access.
+      </p>
+      <p>
+        We do not save any video to your phone, and no video (or any other information about the video or you) is sent to us.
+        Your privacy is important, so we keep&nbsp;it&nbsp;simple and do not collect any personal information.
+      </p>
+      <footer>
+       
+      </footer>
+    </div>
+    <a href="#home" class="close">Close</a>
+  </div>
+  <div id="toast"><span></span></div>
+  <script>document.getElementById('copy-year').textContent = (new Date()).getFullYear();</script>
+  <script src="scripts/index.js"></script>
+</body>
+</html>
